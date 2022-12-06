@@ -6,12 +6,12 @@ function NewMeetup() {
   const navigate = useNavigate()
 
   async function addMeetupHandler(meetupData) {
-    await fetch('localhost:8000',
+    await fetch('http://localhost:8000/meetups',
     {
       method: 'POST',
       body: JSON.stringify(meetupData),
       headers: {
-        'Content-Type': 'application/json' 
+        'Content-Type': 'application/json'
       }
     }
     );

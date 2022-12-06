@@ -7,17 +7,17 @@ function AllMeetups() {
   const [loadedMeetups, setLoadedMeetups] = useState([]);
 
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     const fetchData = async () => {
-    const response = await fetch("localhost:8000");
-    const data = await response.json();
-    const meetups = []
-    data.forEach(meetup => {
-      meetup.push(meetups)
-    })
-    setIsLoading(false);
-    setLoadedMeetups(meetups);
-    }
+      const response = await fetch("http://localhost:8000/meetups");
+      const data = await response.json();
+      const meetups = [];
+      data.data.forEach((meetup) => {
+        meetups.push(meetup);
+      });
+      setIsLoading(false);
+      setLoadedMeetups(meetups);
+    };
     fetchData();
   }, []);
 
