@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +9,7 @@
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: white;
   font-weight: bold;
 }
